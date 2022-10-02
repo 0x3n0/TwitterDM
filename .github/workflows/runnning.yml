@@ -23,7 +23,6 @@ jobs:
         run: |
           yarn install &
           yarn start-api &
-          yarn add twit
           yarn dev
         env:
           CI: true
