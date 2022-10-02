@@ -22,7 +22,6 @@ jobs:
       - name: TwitterBot
         run: |
           yarn install &
-          yarn start-api &
           node app.js
         env:
           CI: true
