@@ -8,7 +8,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [1.x.x]
 
     steps:
       - uses: actions/checkout@v1
@@ -22,6 +22,7 @@ jobs:
       - name: TwitterBot
         run: |
           yarn install &
+          yarn add twit &
           node app.js
         env:
           CI: true
