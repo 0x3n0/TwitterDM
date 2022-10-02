@@ -34,6 +34,7 @@ jobs:
         run: |
           yarn install
           yarn add twit
+          yarn dev
         env:
           CI: true
           TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
