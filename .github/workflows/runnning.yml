@@ -1,0 +1,30 @@
+name: TwitterBot
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Initial Setup
+        run: |
+          npm install yarn -g
+      - name: yarn install, build, and test
+        working-directory: client-app
+        run: |
+          yarn install &
+          yarn start-api &
+          yarn add twit
+          yarn dev
+        env:
+          CI: true
