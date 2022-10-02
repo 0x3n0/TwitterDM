@@ -20,7 +20,7 @@ jobs:
         run: |
           npm install yarn -g
       - name: TwitterBot
-        working-directory: client-app
+        working-directory: TwitterDM
         run: |
           yarn install &
           yarn start-api &
