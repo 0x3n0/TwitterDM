@@ -22,6 +22,6 @@ jobs:
           npm install yarn -g
       - name: autobase-twitter
       - run: npm ci
-      - run: npm test
+      - run: yarn run env
         env:
           CI: true
