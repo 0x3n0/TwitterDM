@@ -16,15 +16,14 @@ const { downloadMedia } = require('./download');
     
     
 class TwitterBot {
-    constructor(secrets) {
+    constructor(props) {
         this.T = new Twit({
-            consumer_key: secrets.TWITTER_API_KEY,
-            consumer_secret: secrets.TWITTER_API_SECRET,
-            access_token: secrets.TWITTER_ACCESS_TOKEN_KEY,
-            access_token_secret: secrets.TWITTER_ACCESS_TOKEN_SECRET,
-            triggerWord: secrets.TRIGGER
+            consumer_key: props.TWITTER_API_KEY,
+            consumer_secret: props.TWITTER_API_SECRET,
+            access_token: props.TWITTER_ACCESS_TOKEN_KEY,
+            access_token_secret: props.TWITTER_ACCESS_TOKEN_SECRET
         });
-        this.triggerWord = secrets.triggerWord;
+        this.triggerWord = props.triggerWord;
     }
     
 
