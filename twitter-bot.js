@@ -24,7 +24,7 @@ class TwitterBot {
             access_token_secret: props.env.TWITTER_ACCESS_TOKEN_SECRET,
             triggerWord: props.env.TRIGGER
         });
-        this.triggerWord = props.env.triggerWord;
+        this.triggerWord = props.triggerWord;
     }
     
 
