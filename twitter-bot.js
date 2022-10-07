@@ -3,16 +3,29 @@ const fs = require('fs');
 
 const { downloadMedia } = require('./download');
 
+//class TwitterBot {
+//    constructor(props) {
+//        this.T = new Twit({
+//            consumer_key: props.consumer_key,
+//            consumer_secret: props.consumer_secret,
+//            access_token: props.access_token,
+//            access_token_secret: props.access_token_secret
+//        });
+//        this.triggerWord = props.triggerWord;
+//    }
+    
+    
 class TwitterBot {
     constructor(props) {
         this.T = new Twit({
-            consumer_key: props.consumer_key,
-            consumer_secret: props.consumer_secret,
-            access_token: props.access_token,
-            access_token_secret: props.access_token_secret
+            consumer_key: props.TWITTER_API_KEY,
+            consumer_secret: props.TWITTER_API_SECRET,
+            access_token: props.TWITTER_ACCESS_TOKEN_KEY,
+            access_token_secret: props.TWITTER_ACCESS_TOKEN_SECRET
         });
         this.triggerWord = props.triggerWord;
     }
+    
 
     getAdminUserInfo = () => {
         return new Promise((resolve, reject) => {
