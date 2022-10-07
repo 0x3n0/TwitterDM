@@ -21,7 +21,8 @@ class TwitterBot {
             consumer_key: props.TWITTER_API_KEY,
             consumer_secret: props.TWITTER_API_SECRET,
             access_token: props.TWITTER_ACCESS_TOKEN_KEY,
-            access_token_secret: props.TWITTER_ACCESS_TOKEN_SECRET
+            access_token_secret: props.TWITTER_ACCESS_TOKEN_SECRET,
+            triggerWord: props.TRIGGER
         });
         this.triggerWord = props.triggerWord;
     }
