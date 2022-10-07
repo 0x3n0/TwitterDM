@@ -1,13 +1,5 @@
 name: TwitterDM
 
-env:
-    CI: true
-    TWITTER_API_KEY: ${{ secrets.TWITTER_API_KEY }}
-    TWITTER_API_SECRET: ${{ secrets.TWITTER_API_SECRET }}
-    TWITTER_ACCESS_TOKEN_KEY: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
-    TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
-    TRIGGER: ${{secrets.TRIGGER}}
-
 on:
   schedule:
     # at 21:30 hrs everyday
@@ -50,6 +42,3 @@ jobs:
           TWITTER_ACCESS_TOKEN_KEY: ${{ secrets.TWITTER_ACCESS_TOKEN_KEY }}
           TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
           TRIGGER: ${{ secrets.TRIGGER }}
-          
-          
-          
