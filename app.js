@@ -22,13 +22,13 @@ app.use(express.urlencoded({ extended: true }));
 //});
 
 
-  const bot = new TwitterBot({
-    consumer_key: process.env.TWITTER_API_KEY,
-    consumer_secret: process.env.TWITTER_API_SECRET,
-    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
-    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
-    triggerWord: process.env.TRIGGER
-  });
+//  const bot = new TwitterBot({
+//    consumer_key: process.env.TWITTER_API_KEY,
+//    consumer_secret: process.env.TWITTER_API_SECRET,
+//    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+//    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
+//    triggerWord: process.env.TRIGGER
+//  });
 
 
 const job = new CronJob(
