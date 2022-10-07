@@ -22,7 +22,7 @@ class TwitterBot {
             consumer_secret: secrets.TWITTER_API_SECRET,
             access_token: secrets.TWITTER_ACCESS_TOKEN_KEY,
             access_token_secret: secrets.TWITTER_ACCESS_TOKEN_SECRET,
-            TRIGGER: secrets.TRIGGER
+            triggerWord: secrets.TRIGGER
         });
         this.triggerWord = secrets.triggerWord;
     }
