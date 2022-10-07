@@ -38,10 +38,10 @@ const downloadMedia = async (mediaUrl, fileName) => {
             }
         );
         fs.writeFileSync(fileName, data);
-        console.log('Media has been successfuly downloaded ......')
+        console.log('successfully download media')
         return data;
     } catch (error) {
-        throw new Error('error from downloading media.');
+        throw new Error('error download media.');
     }
 };
 
