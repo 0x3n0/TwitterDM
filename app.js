@@ -58,12 +58,12 @@ async function onComplete() {
 };
 
 app.get('/', (req, res, next) => {
-    res.send('Welcome to twitter bot server!');
+    res.send('Twitter Bot server!');
 });
 
 app.get('/trigger', async (req, res, next) => {
     job.fireOnTick();
-    res.send('job triggered!');
+    res.send('trigger!');
 });
 
 app.listen(PORT, () => console.log(`Server is listening to port ${PORT}`));
