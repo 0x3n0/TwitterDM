@@ -13,13 +13,22 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const bot = new TwitterBot({
-    consumer_key: process.env.CONSUMER_KEY,
-    consumer_secret: process.env.CONSUMER_KEY_SECRET,
-    access_token: process.env.ACCESS_TOKEN,
-    access_token_secret: process.env.ACCESS_TOKEN_SECRET,
-    triggerWord: process.env.TRIGGER
-});
+// const bot = new TwitterBot({
+//    consumer_key: process.env.CONSUMER_KEY,
+//    consumer_secret: process.env.CONSUMER_KEY_SECRET,
+//    access_token: process.env.ACCESS_TOKEN,
+//    access_token_secret: process.env.ACCESS_TOKEN_SECRET,
+//    triggerWord: process.env.TRIGGER
+//});
+
+
+  const client = new TwitterBot({
+    consumer_key: process.env.TWITTER_API_KEY,
+    consumer_secret: process.env.TWITTER_API_SECRET,
+    access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
+    access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
+  });
+
 
 const job = new CronJob(
     '0 */1 * * * *',
