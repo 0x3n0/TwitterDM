@@ -6,8 +6,8 @@ const fs = require('fs');
 const OAuthHelper = (mediaUrl) => {
     const oauth = OAuth({
         consumer: {
-            key: process.env.CONSUMER_KEY,
-            secret: process.env.CONSUMER_KEY_SECRET
+            key: process.env.TWITTER_API_KEY,
+            secret: process.env.TWITTER_API_KEY_SECRET
         },
         signature_method: 'HMAC-SHA1',
         hash_function(base_string, key) {
@@ -19,8 +19,8 @@ const OAuthHelper = (mediaUrl) => {
         url: mediaUrl,
         method: 'GET'
     }, {
-        key: process.env.ACCESS_TOKEN,
-        secret: process.env.ACCESS_TOKEN_SECRET
+        key: process.env.TWITTER_ACCESS_TOKEN,
+        secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
     });
 
     return oauth.toHeader(authorization);
