@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 });
 
 const job = new CronJob(
-    '0 */1 * * * *',
+    '* * * * *',
     doJob,
     onComplete,
     true
